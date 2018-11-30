@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using CallingGitApis.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using LBH.APIHub.Data.Domain;
 using CallingGitApis.Models;
 
 namespace CallingGitApis.Controllers

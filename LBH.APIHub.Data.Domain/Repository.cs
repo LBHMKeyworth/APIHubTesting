@@ -1,48 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
+using Newtonsoft.Json;
 
-namespace CallingGitApis.Models
+namespace LBH.APIHub.Data.Domain
 {
-    public class Owner
-    {
-        public string login { get; set; }
-        public int id { get; set; }
-        public string node_id { get; set; }
-        public string avatar_url { get; set; }
-        public string gravatar_id { get; set; }
-        public string url { get; set; }
-        public string html_url { get; set; }
-        public string followers_url { get; set; }
-        public string following_url { get; set; }
-        public string gists_url { get; set; }
-        public string starred_url { get; set; }
-        public string subscriptions_url { get; set; }
-        public string organizations_url { get; set; }
-        public string repos_url { get; set; }
-        public string events_url { get; set; }
-        public string received_events_url { get; set; }
-        public string type { get; set; }
-        public bool site_admin { get; set; }
-    }
-
-    public class Permissions
-    {
-        public bool admin { get; set; }
-        public bool push { get; set; }
-        public bool pull { get; set; }
-    }
-
-    public class License
-    {
-        public string key { get; set; }
-        public string name { get; set; }
-        public string spdx_id { get; set; }
-        public string url { get; set; }
-        public string node_id { get; set; }
-    }
-
     public class Repository
     {
         public int id { get; set; }
@@ -50,7 +12,8 @@ namespace CallingGitApis.Models
         public string name { get; set; }
         public string full_name { get; set; }
         public Owner owner { get; set; }
-        public bool @private { get; set; }
+        [JsonProperty("private")]
+        public bool isPrivate { get; set; }
         public string html_url { get; set; }
         public string description { get; set; }
         public bool fork { get; set; }
@@ -119,30 +82,4 @@ namespace CallingGitApis.Models
         public int network_count { get; set; }
         public License license { get; set; }
     }
-    public class Tree
-    {
-        public string path { get; set; }
-        public string mode { get; set; }
-        public string type { get; set; }
-        public int size { get; set; }
-        public string sha { get; set; }
-        public string url { get; set; }
-    }
-
-    public class RepoContents
-    {
-        public string sha { get; set; }
-        public string url { get; set; }
-        public List<Tree> tree { get; set; }
-        public bool truncated { get; set; }
-    }
-    public class BlobFile
-    {
-        public string content { get; set; }
-        public string encoding { get; set; }
-        public string url { get; set; }
-        public string sha { get; set; }
-        public int size { get; set; }
-    }
-
 }

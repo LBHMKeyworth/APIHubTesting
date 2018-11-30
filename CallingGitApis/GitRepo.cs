@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using CallingGitApis.Models;
+using LBH.APIHub.Data.Domain;
 using System.Collections.Generic;
 using System.Linq;
 

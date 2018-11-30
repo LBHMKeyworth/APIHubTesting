@@ -1,4 +1,4 @@
-﻿@model CallingGitApis.Models.Repository
+﻿@model Repository
 
 @{
     ViewData["Title"] = "Repos";
@@ -36,6 +36,12 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.full_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.isPrivate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.isPrivate)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.html_url)
@@ -416,6 +422,5 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+    <a href="../Home/Index">Back to List</a>
 </div>

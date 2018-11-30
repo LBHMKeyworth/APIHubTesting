@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using CallingGitApis.Models;
+using LBH.APIHub.Data.Domain;
 
 namespace CallingGitApis.Controllers
 {
