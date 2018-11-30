@@ -1,0 +1,10 @@
+﻿@model List<Repository> 
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Repositories</h1>
+@foreach(Repository rep in Model)
+{
+<DIV> @Html.ActionLink(rep.name, "Index","Repos", new { repoName = rep.name })   -  @Html.ActionLink("View Read me", "ReadMe", "Repos", new { repoName = rep.name })  </DIV>
+}
